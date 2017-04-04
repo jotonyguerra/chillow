@@ -1,12 +1,11 @@
 class Occupant
 
-  attr_accessor :first_name, :last_name
+  attr_accessor :first_name, :last_name, :name
 
-  def initialize(first_name, last_name) #prob should be a single argument
-    @first_name = first_name
-    @last_name = last_name
+  def initialize(*args)
+    # @name = []
+    # @name << args
+    @first_name = args[0]
+    @last_name = args[1]
   end
-
-
-
 end

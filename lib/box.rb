@@ -1,7 +1,8 @@
 class Box
+  
+  attr_accessor :owner
 
   def initialize(owner)
-    @box_array = []
     @owner = owner
   end
 end

@@ -1,25 +1,44 @@
 module Adder
 
-  def full?(current, max)
-    current.size > max
-  end
-
-  def add(capacity, thing, item) #probably could have better aruments but idk
-    if thing < capacity
-      thing << item #???
-    end
-  end
-
-  def remove
-
-  end
-
-  ## use add_roomate as a template for your add method
-  # def add_roomate(first_name, last_name)
-  #   if @occupants.size < @max_occupants
-  #     @occupants << Occupant.new(@first_name=first_name , @last_name = last_name)
+  # def full?
+  #   @occupants.size >= @max_occupants
+  # end
+  #
+  # def add(*roomate)
+  #   @roomate = Occupant.new(roomate[0], roomate[1])
+  #   if @occupants.size <= @max_occupants
+  #     @occupants << @roomate
+  #   else
+  #     puts "Dwelling is at capacity"
   #   end
   # end
+
+  # def remove_roomate
+  #   @occupants.pop
+  # end
+  #
+  # def remove_box
+  #   @box_array.pop
+  # end
+
+  def full?(thing, capacity)
+    # binding.pry
+      thing.count >= capacity
+  end
+
+  def add_thing(thing, capacity, item)
+    if thing.current_number.count < capacity
+      thing.current_number << item
+    end
+      thing
+  end
+
+  def remove_thing(thing)
+    if thing.count > 0
+      thing.pop
+    end
+    thing
+  end
 
 
 end
